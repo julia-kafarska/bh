@@ -1,0 +1,61 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Player {
+  player_id              String  @id
+  gsis_id                String?
+  depth_chart_position   String?
+  last_name              String
+  birth_city             String?
+  espn_id                String?
+  injury_status          String?
+  position               String?
+  depth_chart_order      String?
+  team_abbr              String?
+  injury_notes           String?
+  news_updated           String?
+  college                String?
+  birth_date             String?
+  competitions           Json    @default("[]")
+  rotoworld_id           Int?
+  oddsjam_id             String?
+  birth_state            String?
+  weight                 String?
+  injury_body_part       String?
+  pandascore_id          String?
+  birth_country          String?
+  yahoo_id               String?
+  status                 String
+  stats_id               String?
+  height                 String?
+  fantasy_data_id        Int?
+  full_name              String
+  hashtag                String
+  first_name             String
+  metadata               Json?
+  search_rank            Int?
+  high_school            String?
+  rotowire_id            String?
+  active                 Boolean
+  swish_id               String?
+  opta_id                String?
+  team                   String?
+  fantasy_positions      Json?
+  search_last_name       String
+  search_full_name       String
+  sport                  String
+  years_exp              Int?
+  age                    Int?
+  sportradar_id          String?
+  practice_description   String?
+  number                 Int?
+  practice_participation String?
+  search_first_name      String
+  injury_start_date      String?
+}
