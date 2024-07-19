@@ -5,34 +5,29 @@ Install Node with NPM (https://nodejs.org/en/download/prebuilt-installer)
 
 ---
 # Check
-> docker -v
->
-> node -v
->
-> npm -v
+`docker -v`
+
+`node -v`
+
+`npm -v`
 
 ---
 # Install
 
-> git clone https://github.com/julia-kafarska/bh
+`git clone https://github.com/julia-kafarska/bh`
 
 ## postgres
-> docker pull postgres
->
-> docker run --name bh -e POSTGRES_PASSWORD=bh -d postgres
+`docker pull postgres`
 
-## pgAdmin
-> docker pull dpage/pgadmin4
->
-> docker run -p 5050:80 -e "PGADMIN_DEFAULT_EMAIL=admin@bh.com" -e "PGADMIN_DEFAULT_PASSWORD=bh" -d dpage/pgadmin4
-
-Access PG Admin: http://localhost:5050
-
-default username: `admin@bh.com`
-
-default password: `bh`
+`docker run --name players-be -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=players -p 5432:5432 -d postgres`
 
 ## Backend
-> cd ./bh/back-end
-> 
-> npm install
+`cd ./bh/back-end`
+
+`cp .env.example .env`
+
+`npm install`
+
+`npm setup`
+
+`npm run start`

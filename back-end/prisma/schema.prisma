@@ -1,17 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-generator client {
-  provider = "prisma-client-js"
-}
-
 model Player {
-  player_id              String  @id
+  player_id              String   @id
   gsis_id                String?
   depth_chart_position   String?
-  last_name              String
+  last_name              String?
   birth_city             String?
   espn_id                String?
   injury_status          String?
@@ -22,8 +22,8 @@ model Player {
   news_updated           String?
   college                String?
   birth_date             String?
-  competitions           Json    @default("[]")
-  rotoworld_id           Int?
+  competitions           Json?    @default("[]")
+  rotoworld_id           String?
   oddsjam_id             String?
   birth_state            String?
   weight                 String?
@@ -31,31 +31,31 @@ model Player {
   pandascore_id          String?
   birth_country          String?
   yahoo_id               String?
-  status                 String
+  status                 String?
   stats_id               String?
   height                 String?
-  fantasy_data_id        Int?
-  full_name              String
-  hashtag                String
-  first_name             String
+  fantasy_data_id        String?
+  full_name              String?
+  hashtag                String?
+  first_name             String?
   metadata               Json?
-  search_rank            Int?
+  search_rank            String?
   high_school            String?
   rotowire_id            String?
-  active                 Boolean
+  active                 Boolean?
   swish_id               String?
   opta_id                String?
   team                   String?
   fantasy_positions      Json?
-  search_last_name       String
-  search_full_name       String
-  sport                  String
-  years_exp              Int?
-  age                    Int?
+  search_last_name       String?
+  search_full_name       String?
+  sport                  String?
+  years_exp              String?
+  age                    String?
   sportradar_id          String?
   practice_description   String?
-  number                 Int?
+  number                 String?
   practice_participation String?
-  search_first_name      String
+  search_first_name      String?
   injury_start_date      String?
 }
