@@ -40,6 +40,8 @@ Install Android Studio (https://nodejs.org/en/download/prebuilt-installer)
 
 `npm run start`
 
+post request to add records http://localhost:3000/players/update 
+
 
 ## App
 
