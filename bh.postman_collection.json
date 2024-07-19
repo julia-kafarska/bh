@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "f66a3ed3-ca9c-43cf-a722-665cb723752d",
+		"name": "bh",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2633653"
+	},
+	"item": [
+		{
+			"name": "players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/players",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "playerById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/players/1234",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"players",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateDataBase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/players/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"players",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
