@@ -32,12 +32,12 @@ const PlayerList: React.FC<Props> = ({navigation}) => {
   const loadPlayers = async () => {
     setLoading(true);
     const {data} = await axios.get(
-      `http://10.0.2.2:3000/players?limit=${PAGE_SIZE}&page=${page}&search=${searchQuery.toLowerCase()}`,
+      `http://127.0.0.1:3000/players?limit=${PAGE_SIZE}&page=${page}&search=${searchQuery.toLowerCase()}`,
     );
     if (data.data) {
       setPlayers(data.data);
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   const handleLoadMore = (value: number) => {
